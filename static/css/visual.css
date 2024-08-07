@@ -6,6 +6,12 @@
   overflow: hidden;
 }
 
+.resize-image {
+  width: 80%;
+  max-width: 80%;
+}
+
+
 
 .image-after {
   display: block;
