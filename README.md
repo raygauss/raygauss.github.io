@@ -4,11 +4,14 @@ This is the repository that contains source code for the [Raygauss website](http
 
 If you find RayGauss useful for your work please cite:
 ```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+@misc{blanc2024raygaussvolumetricgaussianbasedray,
+      title={RayGauss: Volumetric Gaussian-Based Ray Casting for Photorealistic Novel View Synthesis}, 
+      author={Hugo Blanc and Jean-Emmanuel Deschaud and Alexis Paljic},
+      year={2024},
+      eprint={2408.03356},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2408.03356}, 
 }
 ```
 
