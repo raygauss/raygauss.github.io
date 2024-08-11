@@ -147,7 +147,7 @@
             <div class="video-border">
               <div id="intr_video" class="video-wrapper">
                 <div class="video-after">
-                  <video src="static/videos/rg_final.mp4" autoplay muted loop></video>
+                  <video id="videoAfter" src="static/videos/rg_final.mp4" autoplay muted loop></video>
                   <div class="video-afterPosition afterLabel">
                     RayGauss
                   </div>
@@ -155,7 +155,7 @@
                 
                 <div class="video-before">
                   <div class="video-before-inset">
-                    <video src="static/videos/gs_final.mp4" autoplay muted loop></video>
+                    <video id="videoBefore" src="static/videos/gs_final.mp4" autoplay muted loop></video>
                     <div class="video-beforePosition beforeLabel">
                       3D Gaussian Splatting
                     </div>
@@ -883,6 +883,34 @@
     </div>
   </div>
 </footer>
+
+<script>
+  const videoAfter = document.getElementById('videoAfter');
+  const videoBefore = document.getElementById('videoBefore');
+
+  // Fonction pour synchroniser le temps de lecture des deux vidéos
+  function syncVideos(sourceVideo, targetVideo) {
+    if (Math.abs(sourceVideo.currentTime - targetVideo.currentTime) > 0.01) {
+      targetVideo.currentTime = sourceVideo.currentTime;
+    }
+  }
+
+  // Synchroniser la lecture
+  videoAfter.addEventListener('play', () => videoBefore.play());
+  videoBefore.addEventListener('play', () => videoAfter.play());
+
+  // Synchroniser la mise en pause
+  videoAfter.addEventListener('pause', () => videoBefore.pause());
+  videoBefore.addEventListener('pause', () => videoAfter.pause());
+
+  // Synchroniser les changements de temps
+  videoAfter.addEventListener('timeupdate', () => syncVideos(videoAfter, videoBefore));
+  videoBefore.addEventListener('timeupdate', () => syncVideos(videoBefore, videoAfter));
+
+  // Synchroniser le redémarrage après la fin d'une boucle
+  videoAfter.addEventListener('ended', () => videoBefore.play());
+  videoBefore.addEventListener('ended', () => videoAfter.play());
+</script>
 
 </body>
 </html>
