@@ -888,10 +888,17 @@
   const videoAfter = document.getElementById('videoAfter');
   const videoBefore = document.getElementById('videoBefore');
 
+  // Variable de verrouillage pour empêcher les mises à jour cycliques
+  let isSyncing = false;
+
   // Fonction pour synchroniser le temps de lecture des deux vidéos
   function syncVideos(sourceVideo, targetVideo) {
-    if (Math.abs(sourceVideo.currentTime - targetVideo.currentTime) > 0.01) {
-      targetVideo.currentTime = sourceVideo.currentTime;
+    if (!isSyncing) {
+      isSyncing = true;  // Activer le verrouillage
+      if (Math.abs(sourceVideo.currentTime - targetVideo.currentTime) > 0.1) {
+        targetVideo.currentTime = sourceVideo.currentTime;
+      }
+      isSyncing = false; // Désactiver le verrouillage
     }
   }
 
