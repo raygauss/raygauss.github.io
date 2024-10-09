@@ -179,6 +179,11 @@
   /* overflow: hidden; */
 }
 
+.video-container {
+  display: flex;
+  justify-content: space-between; /* Distribute space between the videos */
+}
+
 .video-border {
   border: 3px solid black; /* Black border */
   border-radius: 15px; /* Adjust this value for different rounded corners */
