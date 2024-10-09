@@ -182,6 +182,7 @@
 .video-container {
   display: flex;
   justify-content: space-between; /* Distribute space between the videos */
+  gap: 20px; /* Optional: Adds some space between the videos */
 }
 
 .video-border {
@@ -192,10 +193,11 @@
 }
 
 .video-wrapper {
-  flex: 1; /* Ensures both videos take equal width */
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
 }
-
-
 
 .video-after {
   display: block;
