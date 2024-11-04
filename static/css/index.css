@@ -8,8 +8,9 @@ body {
 }
 
 .link-block a {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    display: inline-block;
+    vertical-align: top;
+    height: 100%; /* Assurez-vous que la hauteur est la même pour chaque bloc */
 }
 
 .dnerf {
