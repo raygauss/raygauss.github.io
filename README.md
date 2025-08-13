@@ -4,14 +4,16 @@ This is the repository that contains source code for the [Raygauss website](http
 
 If you find RayGauss useful for your work please cite:
 ```
-@misc{blanc2024raygaussvolumetricgaussianbasedray,
-      title={RayGauss: Volumetric Gaussian-Based Ray Casting for Photorealistic Novel View Synthesis}, 
-      author={Hugo Blanc and Jean-Emmanuel Deschaud and Alexis Paljic},
-      year={2024},
-      eprint={2408.03356},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2408.03356}, 
+@INPROCEEDINGS{blanc2025raygauss,
+  author={Blanc, Hugo and Deschaud, Jean-Emmanuel and Paljic, Alexis},
+  booktitle={2025 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)}, 
+  title={RayGauss: Volumetric Gaussian-Based Ray Casting for Photorealistic Novel View Synthesis}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1808-1817},
+  keywords={Training;Hands;Casting;Computer vision;Rendering (computer graphics);Neural radiance field;Inference algorithms;Slabs;Kernel;Videos;volume ray casting;differentiable rendering;radiance fields;novel view synthesis},
+  doi={10.1109/WACV61041.2025.00183}
 }
 ```
 
